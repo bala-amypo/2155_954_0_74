@@ -14,5 +14,17 @@ public class StudentService{
         details.put(st.getId(),st);
         return st;
     }
-    public StudentEntity getStudent
+    public StudentEntity getStudent(int id){
+        return details.get(id);
+    }
+    public Map<Integer,StudentEntity> getAllStudents(){
+        return details;
+    }
+    public StudentEntity updateStudent(int id,StudentEntity st){
+        if(details.containsKey(id)){
+            details.put(id,st);
+            return st;
+        }
+        return null;
+    }
 }

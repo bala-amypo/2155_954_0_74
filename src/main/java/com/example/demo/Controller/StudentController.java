@@ -14,8 +14,7 @@ import com.example.demo.Entity.StudentEntity;
 import com.example.demo.Service.StudentService;
 
 @RestController
-public class StudentController{
-    @Autowired
+      @Autowired
     StudentService ser;
     @PostMapping("/Postadd")
     public StudentEntity post(@RequestBody StudentEntity st){
